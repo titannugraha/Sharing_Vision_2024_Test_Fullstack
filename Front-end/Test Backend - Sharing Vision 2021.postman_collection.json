@@ -1,0 +1,149 @@
+{
+	"info": {
+		"_postman_id": "7b771293-e83e-4b90-89fc-8eb0a2688c62",
+		"name": "Test Backend - Sharing Vision 2021",
+		"description": "Nama : Titan Nugraha\n\nPosisi : Fullstack Developer",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33196331"
+	},
+	"item": [
+		{
+			"name": "Buat Article",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Test Backend - Sharing Vision 2021\",\r\n    \"content\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\",\r\n    \"category\": \"Programming\",\r\n    \"status\": \"draft\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/campaign",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"campaign"
+					]
+				},
+				"description": "Endtpoint untuk membuat artikel baru."
+			},
+			"response": []
+		},
+		{
+			"name": "Limit dan Offset Article",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/article/2/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"article",
+						"2",
+						"1"
+					]
+				},
+				"description": "Mengambil data artikel , berdasarkan limit dan offsett yang dikirim melalui parameter."
+			},
+			"response": []
+		},
+		{
+			"name": "Mengambil Artikel dengan Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/article/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"article",
+						"1"
+					]
+				},
+				"description": "Mengambil artikel berdasarkan id yang dikirim dari parameter untuk melihat detail artikel."
+			},
+			"response": []
+		},
+		{
+			"name": "Merubah Artikel Dengan Id",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Test Backend - Sharing Vision 2021\",\r\n    \"content\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\",\r\n    \"category\": \"Teknologi\",\r\n    \"status\": \"publish\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/article/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"article",
+						"1"
+					]
+				},
+				"description": "Merubah artikel berdasrkan id yang dikirim dari parameter."
+			},
+			"response": []
+		},
+		{
+			"name": "Menghapus Artikel Dengan Id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/article/2",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"article",
+						"2"
+					]
+				},
+				"description": "Menghapus artikel berdasarkan id yang dikirim dari parameter"
+			},
+			"response": []
+		}
+	]
+}
